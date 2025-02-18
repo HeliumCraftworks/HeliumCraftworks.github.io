@@ -5,6 +5,9 @@ const overlayMessage = document.getElementById('overlay-message');
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
+    overlayMessage.textContent = 'Processing your submission...';
+    overlay.style.display = 'flex';
+
     const formData = new FormData(form);
 
     fetch(form.action, {
@@ -14,20 +17,19 @@ form.addEventListener('submit', function (event) {
     })
         .then(response => {
             if (response.ok) {
-                overlay.style.display = 'flex';
-                overlayMessage.textContent = 'Thank you for reaching out.'
+                overlayMessage.textContent = 'Thank you for reaching out.';
                 form.reset();
             } else {
-                overlay.style.display = 'flex';
                 overlayMessage.textContent = 'There was an error with your submission. Please try again later.';
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            overlay.style.display = 'flex';
             overlayMessage.textContent = 'There was an error with your submission. Please try again later.';
+        })
+        .finally(() => {
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 1500);
         });
-    setTimeout(function () {
-        overlay.style.display = 'none';
-    }, 2000);
 });
