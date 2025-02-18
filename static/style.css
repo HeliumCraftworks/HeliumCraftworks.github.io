@@ -1,0 +1,77 @@
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    background: linear-gradient(0deg, #e2c521 0%, #f9d61e 30%, #231381 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.masthead .masthead-content {
+    z-index: 1;
+    position: relative;
+}
+
+header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem;
+}
+
+header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+}
+
+header.masthead .bg-circle {
+    z-index: 0;
+    position: absolute;
+    background: linear-gradient(0deg, #e2c521 0%, #f9d61e 30%, #231381 100%);
+}
+
+header.masthead .bg-circle-1 {
+    height: 250rem;
+    width: 250rem;
+    bottom: -200rem;
+    left: -200rem;
+    background: linear-gradient(45deg, #e2c521 0%, #ff6b6b 30%, #ff6347 100%);
+    border-radius: 50%;
+}
+
+header.masthead .bg-circle-2 {
+    height: 70rem;
+    width: 70rem;
+    top: -40rem;
+    right: -40rem;
+    background: #6a0dad;
+    border-radius: 50%;
+}
+
+.btn-xl {
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.rounded-pill {
+    border-radius: var(--bs-border-radius-pill) !important;
+}
+
+.btn-main {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #231381;
+    --bs-btn-border-color: #231381;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1a0f6b;
+    --bs-btn-hover-border-color: #190d62;
+    --bs-btn-focus-shadow-rgb: 35, 19, 129;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #190d62;
+    --bs-btn-active-border-color: #130b4e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #231381;
+    --bs-btn-disabled-border-color: #231381;
+}
